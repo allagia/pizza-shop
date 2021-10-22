@@ -1,28 +1,7 @@
 .section-title {
-  font-size: 46px;
-  line-height: 57px;
-  letter-spacing: 0.2px;
-  font-weight: normal;
+  font-size: 48px;
 
-  margin: 0 0 27px;
-  max-width: 296px;
+  margin: 0 0 24px;
 
-  color: $black-1;
   text-align: center;
-
-  &--mobile {
-    display: none;
-
-    @include mobile {
-      display: block;
-      margin-bottom: 37px;
-      margin-top: 10px;
-    }
-  }
-
-  &--desktop {
-    @include mobile {
-      display: none;
-    }
-  }
 }

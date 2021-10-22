@@ -1,0 +1,136 @@
+.menu {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+
+  width: calc(100% + 40px);
+  margin-bottom: -40px;
+
+  &__image {
+    width: 210px;
+    height: 213px;
+
+    margin-left: 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: calc(25% - 40px);
+    margin-right: 40px;
+    margin-bottom: 40px;
+    padding: 25px 13px 40px 23px;
+
+    border: 2px solid #ECEEF7;
+    border-radius: 15px;
+    background-color: $white;
+
+    // &::before {
+    //   content: "";
+    //   width: 0;
+    //   height: 0;
+    //   right: 50%;
+    //   transform: translate(-50%, 0);
+    //   bottom: 0;
+    //   position: absolute;
+    //   border-left: 13px solid transparent;
+    //   border-top: 26px solid #088cb7;
+    //   border-right: 13px solid transparent;
+    // }
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   width: 58px;
+    //   height: 4px;
+    //   background-color: #fff;
+    //   bottom: -2px;
+    //   left: 99px;
+    //   border-radius: 59px;
+    // }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+
+    margin: 3px 0 0;
+  }
+
+  &__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__size {
+    font-size: 12px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    line-height: 140%;
+  }
+
+  &__price {
+    font-weight: 300;
+    font-size: 24px;
+
+    align-self: center;
+    margin: 13px 11px 0 0;
+  }
+
+  &__basket {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 33px;
+    height: 33px;
+    border: 2px solid #ECEEF6;
+    border-radius: 59px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    transform: rotate(-45deg);
+
+
+    &:hover {
+      background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+      box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+      background: url("../img/icon-basket-white.svg"), linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+      background-repeat: no-repeat, no-repeat;
+      background-size: auto;
+      background-position: center, center;
+      border: none;
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  &__angle {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+    background-color: $white;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    width: 100px;
+    height: 100px;
+
+    border: 2px solid #ECEEF7;
+    border-radius: 15px;
+
+    z-index: -1;
+  }
+}

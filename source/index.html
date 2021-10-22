@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Figma Land</title>
+  <title>Pizza Shop Classic</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-
+  <include class="visually-hidden" src="build/img/sprite_auto.svg"></include>
   <header class="header container">
 
     <div class="header__navigation">
@@ -21,8 +21,10 @@
           <li class="header__nav-item"><a class="header__nav-link" href="#">Contacts</a></li>
         </ul>
       </nav>
-      <span>Daily 11am - 9pm</span>
-      <a href="tel:0800330898">0 800 33 08 98</a>
+      <div class="header__additional-info">
+        <span class="header__hours">Daily 11am - 9pm</span>
+        <a class="header__phone" href="tel:0800330898">0 800 33 08 98</a>
+      </div>
     </div>
     <a class="header__logo" aria-label="logo"><img src="img/logo@1x.png" srcset="img/logo@2x.png 2x"
         alt="logo Classic"></a>
@@ -33,17 +35,15 @@
   <main class="main">
 
     <section class="intro">
-      <div class="intro__wrap container">
+      <div class="intro__wrap section container">
 
-        <h1 class="intro__title">Food delivery in Kovel</h1>
-        <p class="intro__subtitle">If you decide to relax or have unexpected guests, call us. We make sure that your
+        <h2 class="intro__title section-title">Food delivery in Kovel</h2>
+        <p class="intro__subtitle section-subtitle">If you decide to relax or have unexpected guests, call us. We make
+          sure that your
           vacation is comfortable, enjoyable and delicious</p>
-        <picture class="intro__picture">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/intro@1x.webp 1x, img/intro@2x.webp 2x">
-          <source media="(min-width: 768px)" srcset="img/intro@1x.png 1x, img/intro@2x.png 2x">
-          <img class="intro__image" src="img/intro-mobile@1x.png" srcset="img/intro-mobile@2x.png 2x"
-            alt="figma screenshots">
-        </picture>
+
+        <img class="intro__image" src="img/pizza@1x.png" srcset="img/pizza@2x.png 2x" alt="pizza image">
+
 
       </div>
     </section>
@@ -51,81 +51,129 @@
     <section class="catalog container section">
 
       <h2 class="section-title">Popular dishes</h2>
-      <p class="section-subtitle">Most calendars are designed for teams. Slate is designed for freelancers</p>
 
       <ul class="filter">
-        <li class="filter__item">Pizza</li>
-        <li class="filter__item">Sushi</li>
-        <li class="filter__item">Salad</li>
-        <li class="filter__item">Dessert</li>
-        <li class="filter__item">Drinks</li>
+        <li class="filter__item"><button class="btn filter__btn" type="button">Pizza</button></li>
+        <li class="filter__item"><button class="btn filter__btn" type="button">Sushi</button></li>
+        <li class="filter__item"><button class="btn filter__btn" type="button">Salad</button></li>
+        <li class="filter__item"><button class="btn filter__btn" type="button">Dessert</button></li>
+        <li class="filter__item"><button class="btn filter__btn" type="button">Drinks</button></li>
       </ul>
 
       <ul class="menu">
         <li class="menu__item">
-          <img src="img/pizza-1@1x.jpg" srcset="img/pizza-1@2x.jpg" alt="pizza image">
+          <img class="menu__image" src="img/pizza-1@1x.jpg" srcset="img/pizza-1@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Quattro formaggi</h2>
+            <h3 class="menu__title">Quattro formaggi</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, Mozzarella, Cheddar, Blue, Parmesan</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <div class="menu__angle">
+            <span class="menu__basket">
+              <svg width="13px" height="14px">
+                <use xlink:href="#icon-basket"></use>
+              </svg>
+            </span>
+          </div>
         </li>
         <li class="menu__item">
+          <img class="menu__image" src="img/pizza-2@1x.jpg" srcset="img/pizza-2@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Карбонара</h2>
+            <h3 class="menu__title">Карбонара</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, Mozzarella, Cheddar, Blue, Parmesan</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <span class="menu__basket">
+            <svg width="13px" height="14px">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+          </span>
         </li>
         <li class="menu__item">
+          <img class="menu__image" src="img/pizza-3@1x.jpg" srcset="img/pizza-3@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Філадельфія селмон</h2>
+            <h3 class="menu__title">Філадельфія селмон</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, mozzarella, barrel, eggs, Parmesan cheese</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <span class="menu__basket">
+            <svg width="13px" height="14px">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+          </span>
         </li>
         <li class="menu__item">
+          <img class="menu__image" src="img/pizza-4@1x.jpg" srcset="img/pizza-4@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Ді маре</h2>
+            <h3 class="menu__title">Ді маре</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, Mozzarella, Cheddar, Blue, Parmesan</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <span class="menu__basket">
+            <svg width="13px" height="14px">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+          </span>
         </li>
         <li class="menu__item">
+          <img class="menu__image" src="img/pizza-1@1x.jpg" srcset="img/pizza-1@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Кватро формаджіо</h2>
+            <h3 class="menu__title">Кватро формаджіо</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, Mozzarella, Cheddar, Blue, Parmesan</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <span class="menu__basket">
+            <svg width="13px" height="14px">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+          </span>
         </li>
         <li class="menu__item">
+          <img class="menu__image" src="img/pizza-1@1x.jpg" srcset="img/pizza-1@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Кватро формаджіо</h2>
+            <h3 class="menu__title">Кватро формаджіо</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, mozzarella, barrel, eggs, Parmesan cheese</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <span class="menu__basket">
+            <svg width="13px" height="14px">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+          </span>
         </li>
         <li class="menu__item">
+          <img class="menu__image" src="img/pizza-1@1x.jpg" srcset="img/pizza-1@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Кватро формаджіо</h2>
+            <h3 class="menu__title">Кватро формаджіо</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, Mozzarella, Cheddar, Blue, Parmesan</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <span class="menu__basket">
+            <svg width="13px" height="14px">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+          </span>
         </li>
         <li class="menu__item">
+          <img class="menu__image" src="img/pizza-1@1x.jpg" srcset="img/pizza-1@2x.jpg" alt="pizza image">
           <div class="menu__header">
-            <h2 class="menu__title">Кватро формаджіо</h2>
+            <h3 class="menu__title">Кватро формаджіо</h3>
             <span class="menu__size">32cm</span>
           </div>
           <p class="menu__subtitle">Dough, mozzarella, barrel, eggs, Parmesan cheese</p>
-          <span class="nemu__price">119 UAH</span>
+          <span class="menu__price">119 UAH</span>
+          <span class="menu__basket">
+            <svg width="13px" height="14px">
+              <use xlink:href="#icon-basket"></use>
+            </svg>
+          </span>
         </li>
       </ul>
 
