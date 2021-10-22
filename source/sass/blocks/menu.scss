@@ -6,7 +6,7 @@
   align-self: flex-start;
 
   width: calc(100% + 40px);
-  margin-bottom: -40px;
+  margin-bottom: -10px;
 
   &__image {
     width: 210px;
@@ -21,36 +21,15 @@
     flex-direction: column;
     width: calc(25% - 40px);
     margin-right: 40px;
-    margin-bottom: 40px;
-    padding: 25px 13px 40px 23px;
+    margin-bottom: 10px;
+    padding: 25px 13px 70px 23px;
 
-    border: 2px solid #ECEEF7;
+    border: 2px solid transparent;
     border-radius: 15px;
     background-color: $white;
-
-    // &::before {
-    //   content: "";
-    //   width: 0;
-    //   height: 0;
-    //   right: 50%;
-    //   transform: translate(-50%, 0);
-    //   bottom: 0;
-    //   position: absolute;
-    //   border-left: 13px solid transparent;
-    //   border-top: 26px solid #088cb7;
-    //   border-right: 13px solid transparent;
-    // }
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   width: 58px;
-    //   height: 4px;
-    //   background-color: #fff;
-    //   bottom: -2px;
-    //   left: 99px;
-    //   border-radius: 59px;
-    // }
+    background-image: url("../img/rectangle.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   &__title {
@@ -86,6 +65,9 @@
 
   &__basket {
     position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,7 +79,6 @@
     background-repeat: no-repeat;
     background-size: auto;
     background-position: center;
-    transform: rotate(-45deg);
 
 
     &:hover {
