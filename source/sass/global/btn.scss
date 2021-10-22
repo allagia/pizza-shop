@@ -1,0 +1,11 @@
+.btn {
+  @include button-reset;
+
+  transition: opacity $transition-props;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+}

@@ -1,0 +1,31 @@
+.input {
+  font-size: 14px;
+
+  width: 250px;
+  height: 60px;
+
+  border-radius: 57px;
+  border: 2px solid #ECEEF7;
+  color: #000000;
+
+  transition: opacity $transition-props;
+  outline: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &::placeholder {
+    color: #222222;
+  }
+
+
+  &.invalid {
+    color: red;
+    border: 1px solid red;
+
+    &:focus {
+      border-color: red;
+    }
+  }
+}
