@@ -35,6 +35,14 @@
       opacity: 0.1;
       border: 2px solid #FFFFFF;
       border-radius: 15px;
+
+      @include mobile {
+        width: calc(100% - 40px);
+      }
+    }
+
+    @include mobile {
+      width: calc(100% - 40px);
     }
   }
 

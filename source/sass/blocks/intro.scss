@@ -10,11 +10,20 @@
   background-size: 98%, 96%;
   background-position: 0 136px,29px 49px;
   background-attachment: fixed;
-  transform: translateZ(-2px);
 
   @include retina {
     background-image: url("../img/vegitable@2x.png"), url("../img/icons@2x.png");
   }
+
+  @include tablet {
+    margin-top: -147px;
+  }
+
+  &__wrap {
+    overflow-x: hidden;
+  }
+
+
 
 
   &__image {

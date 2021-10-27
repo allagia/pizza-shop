@@ -3,8 +3,21 @@
 
   display: grid;
   column-gap: 40px;
-  row-gap: 14px;
+  row-gap: 40px;
   grid-template-columns: repeat(4, 1fr);
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include tablet {
+    column-gap: 20px;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
 
 
   &__image {
@@ -37,14 +50,30 @@
     display: flex;
     flex-direction: column;
 
-    padding: 27px 13px 40px 23px;
+    padding: 27px 13px 21px 23px;
 
-    border: 2px solid transparent;
+    // border: 2px solid transparent;
     border-radius: 15px;
     background-color: $white;
-    background-image: url("../img/rectangle.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    border: 2px solid #ECEEF7;
+
+    // background-image: url("../img/rectangle.svg");
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translate(-50%, 0);
+
+      width: 100px;
+      height: 30px;
+      background-image: url("../img/bottom.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   &__title {
@@ -81,7 +110,7 @@
 
   &__basket {
     position: absolute;
-    bottom: 9px;
+    bottom: -15px;
     left: 50%;
     transform: translate(-50%, 0);
     display: flex;
