@@ -1,16 +1,24 @@
 .intro {
   margin-top: -138px;
-  padding-top: 203px;
+
   max-height: 832px;
   background-color: #F0F5FB;
-  background-image: url("../img/icons@1x.png"), url("../img/vegitable@1x.png");
-  background-repeat: no-repeat;
-  background-size: 1412px, 1386px;
-  background-position: 0 136px,29px 49px;
 
 
-  @include retina {
-    background-image: url("../img/vegitable@2x.png"), url("../img/icons@2x.png");
+
+
+
+  &__wrap {
+    padding-top: 203px;
+    background-image: url("../img/icons@1x.png"), url("../img/vegitable@1x.png");
+    background-repeat: no-repeat;
+    background-size: 1412px, 1386px;
+    background-size: 98%, 96%;
+    background-position: 0 136px,29px 49px;
+
+    @include retina {
+      background-image: url("../img/vegitable@2x.png"), url("../img/icons@2x.png");
+    }
   }
 
   &__image {

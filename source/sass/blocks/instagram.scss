@@ -1,0 +1,49 @@
+.instagram {
+  position: relative;
+
+  margin-top: -16px;
+  margin-bottom: 128px;
+
+  &__nameplate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 480px;
+    height: 180px;
+
+    background: linear-gradient(45.04deg, #FD9924 -51.05%, #F65B16 134.89%);
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+    border-radius: 15px;
+
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 440px;
+      height: 140px;
+
+      opacity: 0.1;
+      border: 2px solid #FFFFFF;
+      border-radius: 15px;
+    }
+  }
+
+  &__address {
+    font-size: 24px;
+    color: $white;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}

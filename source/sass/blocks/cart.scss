@@ -1,0 +1,77 @@
+.cart {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 73px 58px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border: 2px solid #ECEEF7;
+    background-color: $white;
+    border-radius: 50%;
+    box-shadow: 0 16px 48px rgba($color: #000000, $alpha: 0.2);
+    transition: opacity $transition-props;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__amount {
+    position: absolute;
+    bottom: -11px;
+    right: -10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    font-weight: 500;
+    font-size: 18px;
+
+    border-radius: 50%;
+    background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+    color: $white;
+  }
+
+  &__price {
+    position: absolute;
+    left: -132px;
+    top: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105px;
+    height: 47px;
+
+    font-size: 18px;
+    font-weight: 900;
+
+    border-radius: 3px;
+    background-color: #3F3F3F;
+    color: $white;
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      right: -12px;
+      top: 11px;
+      position: absolute;
+      border-top: 13px solid transparent;
+      border-left: 13px solid #3F3F3F;
+      border-bottom: 13px solid transparent;
+    }
+  }
+}

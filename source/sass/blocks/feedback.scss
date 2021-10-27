@@ -1,0 +1,83 @@
+.feedback {
+  // padding: 81px 0 0;
+  max-height: 575px;
+
+  background-color: #F0F5FB;
+
+
+  &__wrap {
+    padding-top: 81px;
+
+    background-image: url("../img/vegitable-2@1x.png"), url("../img/icons-3@1x.png");
+    background-size: contain, 1378px;
+    background-repeat: no-repeat;
+    background-position: 0 107px, 0 251px;
+
+    @include retina {
+      background-image: url("../img/vegitable-2@2x.png"), url("../img/icons-3@2x.png");
+    }
+  }
+
+  &__title {
+    line-height: 150%;
+    max-width: 500px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 854px;
+    margin-top: 18px;
+
+    input {
+      font-size: 14px;
+      width: 260px;
+      height: 60px;
+      padding: 0 31px;
+
+      color: #222222;
+      background: #FFFFFF;
+      border: 2px solid #ECEEF7;
+      border-radius: 57px;
+
+      outline: none;
+      transition: opacity $transition-props;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    button {
+      font-size: 18px;
+      font-weight: bold;
+      color: $white;
+
+      width: 260px;
+      height: 60px;
+      padding: 0 53px 0 58px;
+
+      text-align: left;
+
+      background: url("../img/arrow.svg"), linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+      box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+      border-radius: 59px;
+      background-repeat: no-repeat;
+      background-position: 176px center, center;
+
+      transition: opacity $transition-props;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 684px;
+    height: auto;
+    margin-top: -27px;
+  }
+}

@@ -1,35 +1,50 @@
 .menu {
   @include list-reset;
 
-  display: flex;
-  flex-wrap: wrap;
-  align-self: flex-start;
+  display: grid;
+  column-gap: 40px;
+  row-gap: 14px;
+  grid-template-columns: repeat(4, 1fr);
 
-  width: calc(100% + 40px);
-  margin-bottom: -10px;
 
   &__image {
     width: 210px;
     height: 213px;
 
     margin-left: 20px;
+    margin-bottom: 2px;
+  }
+
+  &__icon {
+    display: none;
+    position: absolute;
+    top: 21px;
+    left: 17px;
+
+    font-weight: 600;
+    font-size: 12px;
+
+    width: 60px;
+    height: 25px;
+    background: linear-gradient(116.88deg, #FE3326 -4.28%, #F26E0E 112.69%), #59AAF1;
+    box-shadow: 0px 4px 8px rgba(205, 71, 41, 0.26);
+    border-radius: 3px;
+    color: $white;
   }
 
   &__item {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: calc(25% - 40px);
-    margin-right: 40px;
-    margin-bottom: 10px;
-    padding: 25px 13px 70px 23px;
+
+    padding: 27px 13px 40px 23px;
 
     border: 2px solid transparent;
     border-radius: 15px;
     background-color: $white;
     background-image: url("../img/rectangle.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100%;
   }
 
   &__title {
@@ -53,6 +68,7 @@
   &__subtitle {
     font-size: 12px;
     line-height: 140%;
+    margin: 10px 0;
   }
 
   &__price {
@@ -60,12 +76,12 @@
     font-size: 24px;
 
     align-self: center;
-    margin: 13px 11px 0 0;
+    margin: 17px 11px 17px 0;
   }
 
   &__basket {
     position: absolute;
-    bottom: 15px;
+    bottom: 9px;
     left: 50%;
     transform: translate(-50%, 0);
     display: flex;
@@ -103,9 +119,6 @@
     transform: translate(-50%, 0) rotate(45deg);
     background-color: $white;
 
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     width: 100px;
     height: 100px;
 
@@ -113,5 +126,15 @@
     border-radius: 15px;
 
     z-index: -1;
+  }
+
+}
+
+
+.menu__item.hit {
+  .menu__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
