@@ -1,22 +1,18 @@
 .feedback {
-  // padding: 81px 0 0;
+  padding: 81px 0 0;
   max-height: 575px;
 
   background-color: #F0F5FB;
+  background-image: url("../img/vegitable-2@1x.png"), url("../img/icons-3@1x.png");
+  background-size: contain, 1378px;
+  background-repeat: no-repeat;
+  background-position: 0 107px, 0 251px;
+  background-attachment: fixed;
 
-
-  &__wrap {
-    padding-top: 81px;
-
-    background-image: url("../img/vegitable-2@1x.png"), url("../img/icons-3@1x.png");
-    background-size: contain, 1378px;
-    background-repeat: no-repeat;
-    background-position: 0 107px, 0 251px;
-
-    @include retina {
-      background-image: url("../img/vegitable-2@2x.png"), url("../img/icons-3@2x.png");
-    }
+  @include retina {
+    background-image: url("../img/vegitable-2@2x.png"), url("../img/icons-3@2x.png");
   }
+
 
   &__title {
     line-height: 150%;

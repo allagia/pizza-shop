@@ -3,23 +3,19 @@
 
   max-height: 832px;
   background-color: #F0F5FB;
+  padding-top: 203px;
+  background-image: url("../img/icons@1x.png"), url("../img/vegitable@1x.png");
+  background-repeat: no-repeat;
+  background-size: 1412px, 1386px;
+  background-size: 98%, 96%;
+  background-position: 0 136px,29px 49px;
+  background-attachment: fixed;
+  transform: translateZ(-2px);
 
-
-
-
-
-  &__wrap {
-    padding-top: 203px;
-    background-image: url("../img/icons@1x.png"), url("../img/vegitable@1x.png");
-    background-repeat: no-repeat;
-    background-size: 1412px, 1386px;
-    background-size: 98%, 96%;
-    background-position: 0 136px,29px 49px;
-
-    @include retina {
-      background-image: url("../img/vegitable@2x.png"), url("../img/icons@2x.png");
-    }
+  @include retina {
+    background-image: url("../img/vegitable@2x.png"), url("../img/icons@2x.png");
   }
+
 
   &__image {
     position: relative;
