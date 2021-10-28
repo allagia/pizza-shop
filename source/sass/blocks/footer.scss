@@ -7,6 +7,10 @@
   padding-top: 42px;
   padding-bottom: 42px;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   &__logo {
     width: 95px;
     top: 28px;
@@ -15,6 +19,10 @@
   &__author {
     position: relative;
     padding-right: 4px;
+
+    @include mobile {
+      margin-top: 30px;
+    }
 
     span {
       font-weight: 700;

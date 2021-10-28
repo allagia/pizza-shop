@@ -6,6 +6,11 @@
   max-width: 1440px;
   margin: 0 auto;
 
+  @include mobile {
+    padding-bottom: 60px;
+    justify-content: center;
+  }
+
 
   &__link {
     position: relative;
@@ -52,8 +57,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 105px;
-    height: 47px;
+    min-width: 105px;
+    min-height: 47px;
 
     font-size: 18px;
     font-weight: 900;

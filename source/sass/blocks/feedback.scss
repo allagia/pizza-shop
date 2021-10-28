@@ -4,13 +4,23 @@
 
   background-color: #F0F5FB;
   background-image: url("../img/vegitable-2@1x.png"), url("../img/icons-3@1x.png");
-  background-size: contain, 1378px;
+  background-size: contain,96%;
   background-repeat: no-repeat;
-  background-position: 0 107px, 0 251px;
+  background-position: 0 161px,0 305px;
   background-attachment: fixed;
 
   @include retina {
     background-image: url("../img/vegitable-2@2x.png"), url("../img/icons-3@2x.png");
+  }
+
+  @include tablet {
+    max-height: 528px;
+    background-size: contain, contain;
+    background-position: 0 200px, 0 350px;
+  }
+
+  @media (max-width: 850px) {
+    max-height: 700px;
   }
 
 
@@ -22,15 +32,22 @@
   &__form {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 854px;
     margin-top: 18px;
+
+    @media (max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     input {
       font-size: 14px;
       width: 260px;
       height: 60px;
       padding: 0 31px;
+      margin-bottom: 15px;
 
       color: #222222;
       background: #FFFFFF;
@@ -74,6 +91,10 @@
     position: relative;
     width: 684px;
     height: auto;
-    margin-top: -27px;
+    margin-top: -42px;
+
+    @media (max-width: 850px) {
+      margin-top: 0;
+    }
   }
 }
